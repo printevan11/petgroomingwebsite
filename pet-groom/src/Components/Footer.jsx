@@ -59,13 +59,19 @@ export default function Footer() {
               Explore
             </h3>
             <ul className="flex flex-col space-y-3">
-              {['Home', 'About Us', 'Services', 'Gallery', 'Blog'].map((link) => (
-                <li key={link}>
-                  <a 
-                    href={`#${link.toLowerCase().replace(' ', '-')}`} 
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'About Us', path: '/aboutus' },
+                { name: 'Services', path: '/services' },
+                { name: 'Gallery', path: '/gallery' },
+                { name: 'Blog', path: '/blog' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.path}
                     className="text-[14.5px] font-semibold text-slate-700 hover:text-[#3b92b3] transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}

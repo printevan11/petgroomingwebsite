@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function App() {
+  const navigate = useNavigate();
+
   // Appointment form inputs
   const [formData, setFormData] = useState({
     customerName: '',
@@ -26,6 +29,10 @@ export default function App() {
     setTimeout(() => {
       setSubmitted(false);
     }, 5000);
+  };
+
+  const scrollToForm = () => {
+    document.getElementById('book-appointment')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -71,7 +78,7 @@ export default function App() {
       </div>
 
       {/* --- BOOK APPOINTMENT CARD OVERLAY --- */}
-      <div className="relative w-full max-w-5xl mx-auto px-4 z-20 -mt-16 md:-mt-20 pb-12">
+      <div id="book-appointment" className="relative w-full max-w-5xl mx-auto px-4 z-20 -mt-16 md:-mt-20 pb-12">
         <form 
           onSubmit={handleSubmit}
           className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-8 flex flex-col gap-5"
@@ -215,20 +222,20 @@ export default function App() {
               </div>
             </div>
 
-            {/* Date Time Picker Input */}
-            <div className="relative flex items-center bg-[#e9eff4] border border-[#d6e2ec] rounded-lg px-3.5 py-2.5">
-              <span className="text-slate-600 mr-2.5 flex-shrink-0">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            {/* Date & Time Picker Input */}
+            <div className="relative flex flex-col bg-[#e9eff4] border border-[#d6e2ec] rounded-lg px-3.5 py-2.5 h-[84px]">
+              <div className="flex items-center gap-1.5 text-slate-800 mb-0.5">
+                <svg className="w-4 h-4 text-slate-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
                 </svg>
-              </span>
-              <input 
-                type="text"
+                <span className="text-[11px] font-bold">Date & Time</span>
+              </div>
+              <input
+                type="datetime-local"
                 name="dateTime"
                 value={formData.dateTime}
                 onChange={handleChange}
-                placeholder="mm/dd/yy --:-- --"
-                className="w-full bg-transparent border-none text-slate-800 text-xs font-semibold placeholder-slate-500 focus:outline-none"
+                className="w-full bg-transparent border-none text-slate-700 text-[11px] font-semibold focus:outline-none flex-grow"
               />
             </div>
 
@@ -323,12 +330,12 @@ export default function App() {
             </p>
 
             <div>
-              <button 
-                type="button"
-                className="bg-[#3e95b9] hover:bg-[#327da0] text-white font-extrabold px-8 py-2.5 rounded-lg shadow-sm transition-all text-xs tracking-wide"
+              <a
+                href="/aboutus"
+                className="bg-[#3e95b9] hover:bg-[#327da0] text-white font-extrabold px-8 py-2.5 rounded-lg shadow-sm transition-all text-xs tracking-wide inline-block"
               >
                 About Us
-              </button>
+              </a>
             </div>
           </div>
 
@@ -381,7 +388,10 @@ export default function App() {
               </ul>
             </div>
 
-            <button className="w-full bg-[#FAF8F5] border border-slate-200 text-slate-700 hover:bg-[#e9eff4] py-2 px-4 rounded-xl text-xs font-bold transition-colors">
+            <button onClick={scrollToForm} className="w-full bg-[#FAF8F5] border border-slate-200 text-slate-700 hover:bg-[#e9eff4] py-2 px-4 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1.5">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+              </svg>
               Book Now
             </button>
           </div>
@@ -417,7 +427,10 @@ export default function App() {
               </ul>
             </div>
 
-            <button className="w-full bg-[#3e95b9] hover:bg-[#327da0] text-white py-2 px-4 rounded-xl text-xs font-bold transition-colors shadow-sm">
+            <button onClick={scrollToForm} className="w-full bg-[#3e95b9] hover:bg-[#327da0] text-white py-2 px-4 rounded-xl text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1.5">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+              </svg>
               Book Now
             </button>
           </div>
@@ -449,7 +462,10 @@ export default function App() {
               </ul>
             </div>
 
-            <button className="w-full bg-[#FAF8F5] border border-slate-200 text-slate-700 hover:bg-[#e9eff4] py-2 px-4 rounded-xl text-xs font-bold transition-colors">
+            <button onClick={scrollToForm} className="w-full bg-[#FAF8F5] border border-slate-200 text-slate-700 hover:bg-[#e9eff4] py-2 px-4 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1.5">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+              </svg>
               Book Now
             </button>
           </div>
@@ -536,10 +552,14 @@ export default function App() {
             At Furever, we provide high-quality, professional, and convenient mobile pet grooming services for your fur babies. We treat them like family, straight to your home.
           </p>
 
-          <button 
+          <button
             type="button"
-            className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 active:scale-95 shadow-md text-xs tracking-wide"
+            onClick={scrollToForm}
+            className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 active:scale-95 shadow-md text-xs tracking-wide flex items-center gap-1.5"
           >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+            </svg>
             Book Now
           </button>
 
@@ -677,8 +697,9 @@ export default function App() {
             Join hundreds of happy pet owners who trust Furever for all their pet care needs. Schedule your appointment today!
           </p>
 
-          <button 
+          <button
             type="button"
+            onClick={() => navigate('/contact')}
             className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 active:scale-95 shadow-md text-xs tracking-wide flex items-center justify-center gap-2"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

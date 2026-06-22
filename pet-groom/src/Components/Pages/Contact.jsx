@@ -42,7 +42,7 @@ export default function App() {
           <h1 className="text-3.5xl md:text-[44px] font-black tracking-tight mb-2">
             Contact
           </h1>
-          <p className="text-[11px] md:text-xs font-bold tracking-wider uppercase text-slate-300">
+          <p className="text-xs md:text-sm font-semibold tracking-widest uppercase text-slate-200">
             Home • Contact
           </p>
         </div>
@@ -289,16 +289,16 @@ export default function App() {
             At Furever, we provide high-quality, consistent, and value-for-money pet-friendly care and grooming services that keep your pets happy, comfortable, and excited to return.
           </p>
 
-          <button 
-            type="button"
-            className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 active:scale-95 shadow-md text-xs tracking-wide flex items-center gap-1.5"
+          <a
+            href="/#book-appointment"
+            className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 shadow-md text-xs tracking-wide flex items-center gap-1.5"
           >
             {/* Perfectly sized calendar SVG icon */}
             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
               <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
             </svg>
             <span>Book Now</span>
-          </button>
+          </a>
 
         </div>
       </div>
