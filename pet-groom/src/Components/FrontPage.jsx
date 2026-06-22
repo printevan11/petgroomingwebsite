@@ -23,12 +23,35 @@ export default function App() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 5000);
+    try {
+      const response = await fetch('https://formspree.io/f/xnjkqdoz', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({
+          customerName: '',
+          contactNumber: '',
+          email: '',
+          location: '',
+          petType: '',
+          groomingService: '',
+          dateTime: '',
+          specialRequests: ''
+        });
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 5000);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+    }
   };
 
   const scrollToForm = () => {
