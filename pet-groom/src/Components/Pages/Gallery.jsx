@@ -82,7 +82,7 @@ export default function App() {
       {/* --- SECTION 1: HERO HEADER "Gallery" --- */}
       <div 
         className="relative h-[280px] md:h-[340px] w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/assets/dog2.png')" }}
+        style={{ backgroundImage: "url('/assets/Dog2.png')" }}
       >
         {/* Semi-transparent dark overlay for high text contrast */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
