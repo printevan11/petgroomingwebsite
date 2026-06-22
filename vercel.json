@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd pet-groom && npm run build",
+  "outputDirectory": "pet-groom/dist",
+  "installCommand": "cd pet-groom && npm install",
+  "framework": "vite"
+}
