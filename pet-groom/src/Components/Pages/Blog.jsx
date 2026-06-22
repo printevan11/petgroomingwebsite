@@ -197,16 +197,15 @@ export default function Blog() {
             At Furever, we provide high-quality, consistent, and value-for-money pet-friendly care and grooming services that keep your pets happy, comfortable, and excited to return.
           </p>
 
-          <button 
-            type="button"
-            onClick={() => triggerAction("Booking Flow Activated!")}
-            className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 active:scale-95 shadow-md text-xs tracking-wide flex items-center justify-center gap-1.5"
+          <a
+            href="/#book-appointment"
+            className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 shadow-md text-xs tracking-wide flex items-center justify-center gap-1.5 inline-block"
           >
             <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
               <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
             </svg>
             <span>Book Now</span>
-          </button>
+          </a>
 
         </div>
       </div>
@@ -233,12 +232,15 @@ export default function Blog() {
                 <h3 className="text-base font-extrabold text-slate-800 tracking-wide">Bath & Brush</h3>
                 <span className="bg-slate-100 text-slate-600 text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Essential</span>
               </div>
-              <button 
-                onClick={() => triggerAction("Bath & Brush Booking Toggled")} 
+              <a
+                href="/#book-appointment"
                 className="text-xs text-[#3e95b9] font-bold hover:underline inline-flex items-center gap-1 mb-3"
               >
-                Book Now ➔
-              </button>
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+                </svg>
+                Book Now
+              </a>
               <p className="text-xs text-slate-500 font-medium mb-6">Perfect for maintenance between haircuts.</p>
               
               <ul className="space-y-3 mb-8">
@@ -253,12 +255,12 @@ export default function Blog() {
               </ul>
             </div>
 
-            <button 
-              onClick={() => triggerAction("Bath & Brush Booking Toggled")}
-              className="w-full bg-[#FAF8F5] border border-slate-200/60 text-slate-700 hover:bg-[#e9eff4] py-2.5 px-4 rounded-xl text-xs font-bold transition-colors"
-            >
+            <a href="/#book-appointment" className="w-full bg-[#FAF8F5] border border-slate-200 text-slate-700 hover:bg-[#e9eff4] py-2.5 px-4 rounded-xl text-xs font-bold transition-colors inline-block text-center flex items-center justify-center gap-1.5">
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+              </svg>
               Book Now
-            </button>
+            </a>
           </div>
 
           {/* Card 2: Full Groom (MOST POPULAR) */}
@@ -276,12 +278,14 @@ export default function Blog() {
                   </svg>
                 </h3>
               </div>
-              <button 
-                onClick={() => triggerAction("Full Grooming Booking Toggled")}
+              <a href="/#book-appointment"
                 className="text-xs text-[#3e95b9] font-bold hover:underline inline-flex items-center gap-1 mb-3"
               >
-                Book Now ➔
-              </button>
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+                </svg>
+                Book Now
+              </a>
               <p className="text-xs text-slate-500 font-medium mb-6">Complete style overhaul for your pet.</p>
 
               <ul className="space-y-3 mb-8">
@@ -302,12 +306,14 @@ export default function Blog() {
               </ul>
             </div>
 
-            <button 
-              onClick={() => triggerAction("Full Grooming Booking Toggled")}
-              className="w-full bg-[#3e95b9] hover:bg-[#327da0] text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-colors shadow-sm"
+            <a href="/#book-appointment"
+              className="w-full bg-[#3e95b9] hover:bg-[#327da0] text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-colors shadow-sm flex items-center justify-center gap-1.5"
             >
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+              </svg>
               Book Now
-            </button>
+            </a>
           </div>
 
           {/* Card 3: Royal Treatment */}
@@ -317,12 +323,14 @@ export default function Blog() {
                 <h3 className="text-base font-extrabold text-slate-800 tracking-wide">Royal Treatment</h3>
                 <span className="bg-slate-100 text-slate-600 text-[9px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">Premium</span>
               </div>
-              <button 
-                onClick={() => triggerAction("Royal Treatment Booking Toggled")}
+              <a href="/#book-appointment"
                 className="text-xs text-[#3e95b9] font-bold hover:underline inline-flex items-center gap-1 mb-3"
               >
-                Book Now ➔
-              </button>
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+                </svg>
+                Book Now
+              </a>
               <p className="text-xs text-slate-500 font-medium mb-6">Complete style overhaul for your pet.</p>
 
               <ul className="space-y-3 mb-8">
@@ -343,12 +351,14 @@ export default function Blog() {
               </ul>
             </div>
 
-            <button 
-              onClick={() => triggerAction("Royal Treatment Booking Toggled")}
-              className="w-full bg-[#FAF8F5] border border-slate-200/60 text-slate-700 hover:bg-[#e9eff4] py-2.5 px-4 rounded-xl text-xs font-bold transition-colors"
+            <a href="/#book-appointment"
+              className="w-full bg-[#FAF8F5] border border-slate-200/60 text-slate-700 hover:bg-[#e9eff4] py-2.5 px-4 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-1.5"
             >
+              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z" />
+              </svg>
               Book Now
-            </button>
+            </a>
           </div>
 
         </div>
@@ -435,7 +445,7 @@ export default function Blog() {
             Pet owners trust us to care for their beloved companions. Our team of specialists is dedicated to providing the highest quality pet grooming services.
           </p>
 
-          <button
+          <a href="/#book-appointment"
             onClick={() => triggerAction("Dialing Furever Support Team...")}
             className="bg-[#ffb800] hover:bg-[#e6a500] text-white font-extrabold px-6 py-2.5 rounded-lg transition-all duration-150 active:scale-95 shadow-md text-xs tracking-wide flex items-center justify-center gap-2"
           >
@@ -444,7 +454,7 @@ export default function Blog() {
               <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z" />
             </svg>
             <span>Contact Us</span>
-          </button>
+          </a>
 
         </div>
       </div>
