@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+
+// Initialize EmailJS with your public key
+emailjs.init('Lxv7Gtt-N1_F43Zct');
 
 export default function App() {
   const navigate = useNavigate();
@@ -17,6 +21,7 @@ export default function App() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submittedData, setSubmittedData] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,30 +30,64 @@ export default function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Prepare service name for display
+    const serviceName = formData.groomingService === 'bath-brush' ? 'Bath & Brush' :
+                      formData.groomingService === 'full-groom' ? 'Full Grooming' :
+                      formData.groomingService === 'nail-trim' ? 'Nail Trimming' : 'Not selected';
+
+    const dateDisplay = formData.dateTime ? new Date(formData.dateTime).toLocaleString('en-PH', { dateStyle: 'full', timeStyle: 'short' }) : 'Not selected';
+
     try {
-      const response = await fetch('https://formspree.io/f/xnjkqdoz', {
-        method: 'POST',
-        body: new FormData(e.target),
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
-      if (response.ok) {
-        setSubmitted(true);
-        setFormData({
-          customerName: '',
-          contactNumber: '',
-          email: '',
-          location: '',
-          petType: '',
-          groomingService: '',
-          dateTime: '',
-          specialRequests: ''
-        });
-        setTimeout(() => {
-          setSubmitted(false);
-        }, 5000);
+      setSubmitted(true);
+      // Save customer data for confirmation display
+      const submittedRecord = {
+        customerName: formData.customerName,
+        email: formData.email,
+        petType: formData.petType,
+        groomingService: formData.groomingService,
+        dateTime: formData.dateTime
+      };
+      setSubmittedData(submittedRecord);
+
+      // Send confirmation email to customer via EmailJS
+      if (formData.email) {
+        const customerParams = {
+          customer_name: formData.customerName,
+          to: formData.email,
+          pet_type: formData.petType || 'Not selected',
+          grooming_service: serviceName,
+          appointment_date: dateDisplay.split(' at ')[0] || dateDisplay,
+          appointment_time: dateDisplay.split(' at ')[1] || ''
+        };
+
+        await emailjs.send('service_2jejcn9', 'template_x7lmocm', customerParams);
+        console.log('Confirmation email sent to customer!');
       }
+
+      // Send notification email to owner via EmailJS
+      const ownerParams = {
+        customer_name: formData.customerName,
+        to: 'fureverpawgrooming@gmail.com',
+        pet_type: formData.petType || 'Not selected',
+        grooming_service: serviceName,
+        appointment_date: dateDisplay.split(' at ')[0] || dateDisplay,
+        appointment_time: dateDisplay.split(' at ')[1] || ''
+      };
+
+      await emailjs.send('service_2jejcn9', 'template_x7lmocm', ownerParams);
+      console.log('Notification email sent to owner!');
+
+      setFormData({
+        customerName: '',
+        contactNumber: '',
+        email: '',
+        location: '',
+        petType: '',
+        groomingService: '',
+        dateTime: '',
+        specialRequests: ''
+      });
     } catch (error) {
       console.error('Form submission error:', error);
     }
@@ -90,8 +129,9 @@ export default function App() {
             At Furever, our passion for pets and dedication to top-notch service ensure your fur babies get the pampering they deserve—all in the comfort of your home.
           </p>
 
-          <button 
+          <button
             type="button"
+            onClick={() => navigate('/services')}
             className="bg-[#4295b9] hover:bg-[#347fa0] text-white font-bold px-7 py-2.5 rounded-lg transition-all duration-150 active:scale-95 shadow-md text-xs sm:text-sm tracking-wide"
           >
             Our Services
@@ -115,10 +155,53 @@ export default function App() {
             <div className="h-[1px] flex-grow bg-slate-300"></div>
           </div>
 
-          {/* Success toast inside form */}
-          {submitted && (
-            <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold px-4 py-3 rounded-lg text-center animate-fade-in">
-              Thank you! Your appointment request has been submitted successfully.
+          {/* Success message and Booking Summary */}
+          {submitted && submittedData && (
+            <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 animate-fade-in">
+              <div className="text-center mb-4">
+                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <h3 className="text-base font-extrabold text-emerald-800">Appointment Request Submitted!</h3>
+                <p className="text-xs text-emerald-700 mt-1">Thank you, {submittedData.customerName}! We received your booking.</p>
+              </div>
+              <div className="bg-white rounded-lg p-3 border border-emerald-100 text-xs space-y-2">
+                <div className="flex justify-between">
+                  <span className="text-slate-500">Email:</span>
+                  <span className="text-slate-800 font-semibold">{submittedData.email || 'Not provided'}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-500">Pet Type:</span>
+                  <span className="text-slate-800 font-semibold capitalize">{submittedData.petType || 'Not selected'}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-500">Service:</span>
+                  <span className="text-slate-800 font-semibold capitalize">
+                    {submittedData.groomingService === 'bath-brush' && 'Bath & Brush'}
+                    {submittedData.groomingService === 'full-groom' && 'Full Grooming'}
+                    {submittedData.groomingService === 'nail-trim' && 'Nail Trimming'}
+                    {!submittedData.groomingService && 'Not selected'}
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-500">Date:</span>
+                  <span className="text-slate-800 font-semibold">
+                    {submittedData.dateTime ? new Date(submittedData.dateTime).toLocaleString('en-PH', { dateStyle: 'full', timeStyle: 'short' }) : 'Not selected'}
+                  </span>
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <p className="text-[10px] text-emerald-700">We will contact you within 24 hours to confirm your appointment.</p>
+                <button
+                  type="button"
+                  onClick={() => { setSubmitted(false); setSubmittedData(null); }}
+                  className="mt-2 text-[10px] text-[#3e95b9] hover:underline font-semibold"
+                >
+                  Book Another Appointment
+                </button>
+              </div>
             </div>
           )}
 

@@ -176,7 +176,7 @@ export default function Blog() {
       {/* --- SECTION 3: COMPLETE PET GROOMING MIDDLE BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=1200')" }}
+        style={{ backgroundImage: "url('src/assets/dog-cat1.png')" }}
       >
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
