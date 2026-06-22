@@ -11,8 +11,8 @@ export default function App() {
       petName: "Solar",
       breed: "Shih Tzu",
       service: "Full Groom",
-      beforeImg: "src/assets/before.png",
-      afterImg: "src/assets/after.png",
+      beforeImg: "/assets/before.png",
+      afterImg: "/assets/after.png",
       quote: "Was satisfied with the fully groom on solar, professional services.",
       author: "Eleanor"
     },
@@ -21,8 +21,8 @@ export default function App() {
       petName: "Solar",
       breed: "Shih Tzu",
       service: "Full Groom",
-      beforeImg: "src/assets/before.png",
-      afterImg: "src/assets/after.png",
+      beforeImg: "/assets/before.png",
+      afterImg: "/assets/after.png",
       quote: "Was satisfied with the fully groom on solar, professional services.",
       author: "Eleanor"
     },
@@ -31,8 +31,8 @@ export default function App() {
       petName: "Solar",
       breed: "Shih Tzu",
       service: "Full Groom",
-      beforeImg: "src/assets/before.png",
-      afterImg: "src/assets/after.png",
+      beforeImg: "/assets/before.png",
+      afterImg: "/assets/after.png",
       quote: "Very satisfied with Furever's groomers, gentle and professional service.",
       author: "Cynthia"
     },
@@ -41,8 +41,8 @@ export default function App() {
       petName: "Solar",
       breed: "Shih Tzu",
       service: "Full Groom",
-      beforeImg: "src/assets/before.png",
-      afterImg: "src/assets/after.png",
+      beforeImg: "/assets/before.png",
+      afterImg: "/assets/after.png",
       quote: "Was satisfied with the fully groom on solar, gentle and professional service.",
       author: "Eleanor"
     }
@@ -52,19 +52,19 @@ export default function App() {
   const blogPosts = [
     {
       id: 1,
-      image: "src/assets/cat1.png",
+      image: "/assets/cat1.png",
       title: "4 BIG Reasons Why Pet Grooming is Important",
       excerpt: "Regular grooming is important for your pet's health and happiness. Learn how you can keep them clean and healthy with these simple DIY grooming tips..."
     },
     {
       id: 2,
-      image: "src/assets/dog1.png",
+      image: "/assets/dog1.png",
       title: "How to Keep Your House Clean With Dogs",
       excerpt: "Living with a dog means dealing with shed hair, muddy paws, and occasional accidents. Here are some smart ways to maintain a pristine home..."
     },
     {
       id: 3,
-      image: "src/assets/cat2.png",
+      image: "/assets/cat2.png",
       title: "Professional Cat Grooming Guide You'll Ever Need",
       excerpt: "Cats are great self-groomers, but they still need professional attention. Discover our comprehensive cat grooming tips and packages..."
     }
@@ -82,7 +82,7 @@ export default function App() {
       {/* --- SECTION 1: HERO HEADER "Gallery" --- */}
       <div 
         className="relative h-[280px] md:h-[340px] w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/dog2.png')" }}
+        style={{ backgroundImage: "url('/assets/dog2.png')" }}
       >
         {/* Semi-transparent dark overlay for high text contrast */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
@@ -219,7 +219,7 @@ export default function App() {
       {/* --- SECTION 4: COMPLETE PET GROOMING MIDDLE BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/dog-cat.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat.png')" }}
       >
         {/* Dark overlay for excellent readable white text */}
         <div className="absolute inset-0 bg-black/65 z-0"></div>
@@ -232,7 +232,7 @@ export default function App() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 
@@ -310,7 +310,7 @@ export default function App() {
       {/* --- SECTION 6: BOTTOM CONTACT BANNER "Professional Pet Care" --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat border-t border-slate-200"
-        style={{ backgroundImage: "url('src/assets/dog-cat1.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat1.png')" }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/55 z-0"></div>
@@ -323,7 +323,7 @@ export default function App() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 

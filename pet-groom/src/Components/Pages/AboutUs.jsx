@@ -8,7 +8,7 @@ export default function App() {
       {/* --- SECTION 1: HERO HEADER "About Us" --- */}
       <div 
         className="relative h-[280px] md:h-[340px] w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/cut-hair1.png')" }}
+        style={{ backgroundImage: "url('/assets/cut-hair1.png')" }}
       >
         {/* Semi-transparent dark overlay */}
         <div className="absolute inset-0 bg-black/55 z-0"></div>
@@ -88,7 +88,7 @@ export default function App() {
           <div className="w-full md:w-[46%] flex justify-center">
             <div className="relative max-w-[380px] md:max-w-full rounded-2xl overflow-hidden shadow-lg border-4 border-white/80 bg-slate-100 aspect-[4/3] w-full">
               <img 
-                src="src/assets/Dog3.png" 
+                src="/assets/Dog3.png" 
                 alt="Wet Dog Grooming Care" 
                 className="w-full h-full object-cover"
               />
@@ -103,7 +103,7 @@ export default function App() {
       <div className="w-full bg-[#eeeeee] py-14 px-6 text-center border-b border-slate-200">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
           
-          <img src="src/assets/furever-logo1.png" alt="Logo" className="w-28 h-auto select-none opacity-80" />
+          <img src="/assets/furever-logo1.png" alt="Logo" className="w-28 h-auto select-none opacity-80" />
 
           <p className="text-base md:text-lg font-bold text-slate-700 leading-relaxed max-w-2xl">
             Enjoy exceptional care, personalized attention, and a loving touch that turns every visit into a happy, stress-free experience for your pet.
@@ -119,7 +119,7 @@ export default function App() {
           {/* Portrait 1: Wirehaired Terrier */}
           <div className="rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-100 aspect-[4/3]">
             <img 
-              src="src/assets/doggy.png" 
+              src="/assets/doggy.png" 
               alt="Terrier Grooming Showcase" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
@@ -128,7 +128,7 @@ export default function App() {
           {/* Portrait 2: Chow Chow with Sunglasses */}
           <div className="rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-100 aspect-[4/3]">
             <img 
-              src="src/assets/doggy1.png" 
+              src="/assets/doggy1.png" 
               alt="Funny Chow Grooming Showcase" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
@@ -137,7 +137,7 @@ export default function App() {
           {/* Portrait 3: White Poodle Cutting */}
           <div className="rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-100 aspect-[4/3]">
             <img 
-              src="src/assets/doggy2.png" 
+              src="/assets/doggy2.png" 
               alt="Poodle Trim Grooming Showcase" 
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
@@ -150,7 +150,7 @@ export default function App() {
       {/* --- SECTION 5: COMPLETE PET GROOMING BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/dog-cat.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat.png')" }}
       >
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
@@ -163,7 +163,7 @@ export default function App() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 
@@ -210,7 +210,7 @@ export default function App() {
             <div>
               <div className="w-full aspect-[4/3] bg-slate-100 overflow-hidden">
                 <img 
-                  src="src/assets/cat1.png" 
+                  src="/assets/cat1.png" 
                   alt="A DIY Reasons Why Pet Grooming is Important" 
                   className="w-full h-full object-cover"
                 />
@@ -236,7 +236,7 @@ export default function App() {
             <div>
               <div className="w-full aspect-[4/3] bg-slate-100 overflow-hidden">
                 <img 
-                  src="src/assets/dog1.png" 
+                  src="/assets/dog1.png" 
                   alt="How to Keep Your House Clean With Dogs" 
                   className="w-full h-full object-cover"
                 />
@@ -262,7 +262,7 @@ export default function App() {
             <div>
               <div className="w-full aspect-[4/3] bg-slate-100 overflow-hidden">
                 <img 
-                  src="src/assets/cat2.png" 
+                  src="/assets/cat2.png" 
                   alt="Professional Cat Grooming Guide" 
                   className="w-full h-full object-cover"
                 />
@@ -290,7 +290,7 @@ export default function App() {
       {/* --- SECTION 7: BOTTOM CTA FOOTER BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat border-t border-slate-200"
-        style={{ backgroundImage: "url('src/assets/dog-cat1.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat1.png')" }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/55 z-0"></div>
@@ -303,7 +303,7 @@ export default function App() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 

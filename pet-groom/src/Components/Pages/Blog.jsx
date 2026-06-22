@@ -28,7 +28,7 @@ export default function Blog() {
       {}
       <div 
         className="relative h-[280px] md:h-[340px] w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/blog_pic.png')" }}
+        style={{ backgroundImage: "url('/assets/blog_pic.png')" }}
       >
         {/* Semi-transparent warm overlay */}
         <div className="absolute inset-0 bg-black/45 z-0"></div>
@@ -92,7 +92,7 @@ export default function Blog() {
               <div>
                 <div className="w-full aspect-[4/3] bg-slate-100 overflow-hidden">
                   <img
-                    src="src/assets/cat1.png"
+                    src="/assets/cat1.png"
                     alt="4 BIG Reasons Why Pet Grooming is Important"
                     className="w-full h-full object-cover"
                   />
@@ -119,7 +119,7 @@ export default function Blog() {
               <div>
                 <div className="w-full aspect-[4/3] bg-slate-100 overflow-hidden">
                   <img
-                    src="src/assets/dog1.png"
+                    src="/assets/dog1.png"
                     alt="How to Keep Your House Clean With Dogs"
                     className="w-full h-full object-cover"
                   />
@@ -146,7 +146,7 @@ export default function Blog() {
               <div>
                 <div className="w-full aspect-[4/3] bg-slate-100 overflow-hidden">
                   <img
-                    src="src/assets/cat2.png"
+                    src="/assets/cat2.png"
                     alt="Professional Cat Grooming Guide You'll Ever Need"
                     className="w-full h-full object-cover"
                   />
@@ -176,7 +176,7 @@ export default function Blog() {
       {/* --- SECTION 3: COMPLETE PET GROOMING MIDDLE BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/dog-cat1.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat1.png')" }}
       >
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
@@ -189,7 +189,7 @@ export default function Blog() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 
@@ -348,7 +348,7 @@ export default function Blog() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut1.png" 
+                src="/assets/cut1.png" 
                 alt="Before Grooming Portrait 1" 
                 className="w-full h-full object-cover"
               />
@@ -360,7 +360,7 @@ export default function Blog() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut2.png" 
+                src="/assets/cut2.png" 
                 alt="After Grooming Portrait 1" 
                 className="w-full h-full object-cover"
               />
@@ -372,7 +372,7 @@ export default function Blog() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut3.png" 
+                src="/assets/cut3.png" 
                 alt="Before Grooming Portrait 2" 
                 className="w-full h-full object-cover"
               />
@@ -384,7 +384,7 @@ export default function Blog() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut4.png" 
+                src="/assets/cut4.png" 
                 alt="After Grooming Portrait 2" 
                 className="w-full h-full object-cover"
               />
@@ -399,7 +399,7 @@ export default function Blog() {
       {}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat border-t border-slate-200"
-        style={{ backgroundImage: "url('src/assets/dog-cat1.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat1.png')" }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/55 z-0"></div>
@@ -412,7 +412,7 @@ export default function Blog() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 

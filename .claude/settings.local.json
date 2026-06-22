@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build)",
+      "Bash(git init)",
+      "Bash(git remote add origin https://github.com/printevan11/petgroomingwebsite.git)",
+      "Bash(git add pet-groom/)",
+      "Bash(git commit -m \"First commit - Pet Groom Website\")",
+      "Bash(git push -u origin master)",
+      "Bash(git add pet-groom/src/Components/Footer.jsx pet-groom/src/Components/FrontPage.jsx pet-groom/src/Components/Pages/AboutUs.jsx pet-groom/src/Components/Pages/Blog.jsx pet-groom/src/Components/Pages/Contact.jsx pet-groom/src/Components/Pages/Gallery.jsx pet-groom/src/Components/Pages/Services.jsx)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(git add pet-groom/index.html)",
+      "Bash(git add pet-groom/src/assets/favicon_io/)"
+    ]
+  }
+}

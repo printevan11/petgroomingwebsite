@@ -32,7 +32,7 @@ export default function App() {
       {/* --- SECTION 1: HERO HEADER with background image_64aff9.jpg --- */}
       <div 
         className="relative min-h-[280px] md:min-h-[340px] w-full flex flex-col items-center justify-center py-8 px-4 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/Contact-1.png')" }}
+        style={{ backgroundImage: "url('/assets/Contact-1.png')" }}
       >
         {/* Semi-transparent dark overlay */}
         <div className="absolute inset-0 bg-black/45 z-0"></div>
@@ -268,7 +268,7 @@ export default function App() {
       {/* --- SECTION 3: BOTTOM COMPLETE PET GROOMING BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat border-t border-slate-200"
-        style={{ backgroundImage: "url('src/assets/dog-cat1.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat1.png')" }}
       >
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/65 z-0"></div>
@@ -281,7 +281,7 @@ export default function App() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 

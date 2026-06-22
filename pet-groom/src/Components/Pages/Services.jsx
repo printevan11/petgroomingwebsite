@@ -7,7 +7,7 @@ export default function App() {
       {/* --- SECTION 1: HERO HEADER "Services" --- */}
       <div 
         className="relative h-[280px] md:h-[340px] w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/calm-dog.png')" }}
+        style={{ backgroundImage: "url('/assets/calm-dog.png')" }}
       >
         {/* Semi-transparent dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
@@ -83,7 +83,7 @@ export default function App() {
           <div className="w-full md:w-[46%] flex justify-center">
             <div className="relative max-w-[440px] md:max-w-full rounded-2xl overflow-hidden shadow-lg border-[8px] border-white bg-slate-100 aspect-[4/3] w-full">
               <img 
-                src="src/assets/cut-hair.png" 
+                src="/assets/cut-hair.png" 
                 alt="Cat Grooming Station Care" 
                 className="w-full h-full object-cover"
               />
@@ -96,7 +96,7 @@ export default function App() {
       {/* --- SECTION 3: COMPLETE PET GROOMING BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('src/assets/dog-cat.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat.png')" }}
       >
         {/* Dark overlay for text contrast */}
         <div className="absolute inset-0 bg-black/60 z-0"></div>
@@ -109,7 +109,7 @@ export default function App() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 
@@ -254,7 +254,7 @@ export default function App() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut1.png" 
+                src="/assets/cut1.png" 
                 alt="Before Grooming Portrait 1" 
                 className="w-full h-full object-cover"
               />
@@ -266,7 +266,7 @@ export default function App() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut2.png" 
+                src="/assets/cut2.png" 
                 alt="After Grooming Portrait 1" 
                 className="w-full h-full object-cover"
               />
@@ -278,7 +278,7 @@ export default function App() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut3.png" 
+                src="/assets/cut3.png" 
                 alt="Before Grooming Portrait 2" 
                 className="w-full h-full object-cover"
               />
@@ -290,7 +290,7 @@ export default function App() {
           <div className="flex flex-col items-center">
             <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm mb-3 border border-slate-100 bg-slate-100">
               <img 
-                src="src/assets/cut4.png" 
+                src="/assets/cut4.png" 
                 alt="After Grooming Portrait 2" 
                 className="w-full h-full object-cover"
               />
@@ -304,7 +304,7 @@ export default function App() {
       {/* --- SECTION 6: BOTTOM CONTACT BANNER --- */}
       <div 
         className="relative py-16 px-6 w-full flex items-center justify-center bg-cover bg-center bg-no-repeat border-t border-slate-200"
-        style={{ backgroundImage: "url('src/assets/dog-cat1.png')" }}
+        style={{ backgroundImage: "url('/assets/dog-cat1.png')" }}
       >
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black/55 z-0"></div>
@@ -317,7 +317,7 @@ export default function App() {
 
           <div className="flex items-center justify-center w-full max-w-xs mb-4 opacity-90">
             <div className="h-[1px] w-12 bg-white/60"></div>
-            <img src="src/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
+            <img src="/assets/logo-white.png" alt="Logo" className="w-20 h-auto mx-3" />
             <div className="h-[1px] w-12 bg-white/60"></div>
           </div>
 
