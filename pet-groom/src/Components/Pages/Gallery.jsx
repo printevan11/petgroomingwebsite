@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function App() {
   const [selectedPet, setSelectedPet] = useState(null);
@@ -54,19 +55,22 @@ export default function App() {
       id: 1,
       image: "/assets/cat1.png",
       title: "4 BIG Reasons Why Pet Grooming is Important",
-      excerpt: "Regular grooming is important for your pet's health and happiness. Learn how you can keep them clean and healthy with these simple DIY grooming tips..."
+      excerpt: "Regular grooming is important for your pet's health and happiness. Learn how you can keep them clean and healthy with these simple DIY grooming tips...",
+      link: "/post1"
     },
     {
       id: 2,
       image: "/assets/dog1.png",
       title: "How to Keep Your House Clean With Dogs",
-      excerpt: "Living with a dog means dealing with shed hair, muddy paws, and occasional accidents. Here are some smart ways to maintain a pristine home..."
+      excerpt: "Living with a dog means dealing with shed hair, muddy paws, and occasional accidents. Here are some smart ways to maintain a pristine home...",
+      link: "/post2"
     },
     {
       id: 3,
       image: "/assets/cat2.png",
       title: "Professional Cat Grooming Guide You'll Ever Need",
-      excerpt: "Cats are great self-groomers, but they still need professional attention. Discover our comprehensive cat grooming tips and packages..."
+      excerpt: "Cats are great self-groomers, but they still need professional attention. Discover our comprehensive cat grooming tips and packages...",
+      link: "/post3"
     }
   ];
 
@@ -269,15 +273,16 @@ export default function App() {
         {/* 3 Columns Grid for Articles */}
         <div className="relative z-10 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
           {blogPosts.map((post) => (
-            <div 
-              key={post.id} 
+            <Link
+              key={post.id}
+              to={post.link}
               className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200/40 flex flex-col justify-between transition-all hover:shadow-md"
             >
               <div>
                 <div className="w-full aspect-[4/3] bg-slate-100 overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
+                  <img
+                    src={post.image}
+                    alt={post.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -295,7 +300,7 @@ export default function App() {
                   Read More &gt;
                 </span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
